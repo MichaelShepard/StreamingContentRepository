@@ -1,0 +1,16 @@
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\06_RepositoryPattern_Tests.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\06_RepositoryPattern_Tests.pdb
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\06_RepositoryPattern_Repository.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\06_RepositoryPattern_Repository.pdb
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\obj\Debug\06_RepositoryPattern_Tests.csprojAssemblyReference.cache
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\obj\Debug\06_RepositoryPattern_Tests.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\obj\Debug\06_RepositoryPattern_Tests.csproj.CopyComplete
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\obj\Debug\06_RepositoryPattern_Tests.dll
+C:\Users\M\Desktop\C Sharp Projects\06_RepositoryPattern_Repository\06_RepositoryPattern_Tests\obj\Debug\06_RepositoryPattern_Tests.pdb

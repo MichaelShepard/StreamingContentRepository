@@ -27,14 +27,76 @@ namespace _06_RepositoryPattern_Repository
 
         // Read
 
-
+        public List<StreamingContent> getContentList()
+        {
+            return _listOfContent; // when callinng this method, you can access the list but only when you call this method
+        }
 
 
         // Update
 
+        public bool UpdateExistingContent (string originalTitle, StreamingContent newContent)
+        {
+            //Find content
+            StreamingContent oldContent = GetContentByTitle(originalTitle);
 
+
+
+            // Update content
+
+            if(oldContent != null)
+            {
+                oldContent.Title = newContent.Title;
+                oldContent.Description = newContent.Description;
+                oldContent.MaturityRating = newContent.MaturityRating;
+                oldContent.IsFamilyFriendly = newContent.IsFamilyFriendly;
+                oldContent.StarRating = newContent.StarRating;
+                oldContent.TypeOfGenre = newContent.TypeOfGenre;
+                return true;  //this gives us feedback that something has been done.
+            } else
+            {
+                return false;
+            }
+        }
 
         // Delete
+        public bool RemoveContentFromList(string title)
+        {
+            StreamingContent content = GetContentByTitle(title); //new StreamingContent object called content; going to call method GetContentByTitle
 
+            if(content == null) // usese object content that is either True or False
+            {
+                return false;
+            }
+
+            int initialCount = _listOfContent.Count; // counts the number of items on the list
+            _listOfContent.Remove(content); // actually removes the content from list
+
+            if (initialCount > _listOfContent.Count) // verifies that the item has been removed
+            {
+                return true;
+
+            } else
+            {
+                return false;
+            }
+
+        }
+
+
+        //Helper Method
+
+        public StreamingContent GetContentByTitle (string title)
+        {
+            foreach (StreamingContent content in _listOfContent) // for each item (_listOfConent) I am going to validate title against
+            {
+                if(content.Title == title)
+                {
+                    return content;
+                }
+            }
+
+            return null; //bc it is a reference type we can return a null
+        }
     }
 }
