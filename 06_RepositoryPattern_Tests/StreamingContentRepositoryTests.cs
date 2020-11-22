@@ -20,7 +20,7 @@ namespace _06_RepositoryPattern_Tests
         public void Arrange()
         {
 
-            _repo = new StreamingContentRepository(); // streatming repository field that has conent
+            _repo = new StreamingContentRepository(); // streaming repository field that has content
             _content = new StreamingContent("Rubber", "A car tyre comes to life with teh power to make people explode and goes on a " +
                 "murderous rampage through the Californian desert", "R", 5.8, false, GenreType.Drama ); // added some content
 
@@ -96,8 +96,6 @@ namespace _06_RepositoryPattern_Tests
 
             // Arrange - use the initialize
 
-
-
             //Act
 
             bool deleteResult = _repo.RemoveContentFromList(_content.Title);
@@ -105,6 +103,24 @@ namespace _06_RepositoryPattern_Tests
 
             //Assert
             Assert.IsTrue(deleteResult);
+
+        }
+
+        [DataTestMethod]
+        [DataRow("Rubber", true) ]
+
+        public void DeleteConent_GivenBoolShouldReturnTrue(string originalTitle, bool shouldDelete)
+        {
+
+            // Arrange - use the initialize
+
+            //Act
+
+            bool deleteResult = _repo.RemoveContentFromList(_content.Title);
+
+
+            //Assert
+            Assert.AreEqual(shouldDelete, deleteResult);
 
         }
     }
