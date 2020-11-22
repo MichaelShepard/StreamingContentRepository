@@ -8,8 +8,12 @@ namespace _06_RepositoryPattern_Console
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)  //First thing that fires off
         {
+
+            ProgramUI program = new ProgramUI();
+            program.Run();
+
         }
     }
 }
