@@ -27,7 +27,7 @@ namespace _06_RepositoryPattern_Repository
 
         // Read
 
-        public List<StreamingContent> getContentList()
+        public List<StreamingContent> GetContentList()
         {
             return _listOfContent; // when callinng this method, you can access the list but only when you call this method
         }
@@ -90,7 +90,7 @@ namespace _06_RepositoryPattern_Repository
         {
             foreach (StreamingContent content in _listOfContent) // for each item (_listOfConent) I am going to validate title against
             {
-                if(content.Title == title)
+                if(content.Title == title.ToLower())
                 {
                     return content;
                 }

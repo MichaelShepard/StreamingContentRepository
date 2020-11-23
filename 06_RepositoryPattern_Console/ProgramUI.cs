@@ -17,6 +17,7 @@ namespace _06_RepositoryPattern_Console
         // Method that runs/starts the UI part of the application
         public void Run() //entry into this class; make it public so somebody can call this method; control the flow or access to the UI
         {
+            SeedContentList(); // runs one time to seed list of titles
             Menu();
         }
 
@@ -150,12 +151,42 @@ namespace _06_RepositoryPattern_Console
         // View current StreamingConent that is saved
         private void DisplayAllContent()
         {
+            Console.Clear();
+            List<StreamingContent> listOfConent = _contentRepo.GetContentList();
+
+            foreach(StreamingContent content in listOfConent)
+            {
+                Console.WriteLine($"Title: {content.Title}\n" + 
+                    $"Desc: {content.Description}");
+            }
 
         }
 
         // View existing content by title
         private void DisplayConentByTitle()
         {
+            Console.Clear();
+            // Prompt the user to give me a title
+            Console.WriteLine("Enter the title of the content you'd like to see:");
+
+            // Get the user's input
+            string title = Console.ReadLine();
+
+            // Find the content by that title
+            StreamingContent content =_contentRepo.GetContentByTitle(title);
+
+            // Display said content if it is not null
+            if (content != null)
+            {
+                Console.WriteLine($"Title: {content.Title} \n" +
+                    $"Desc: {content.Description} \n " +
+                    $"Maturity Rating: {content.MaturityRating} \n" +
+                    $"Starts: {content.StarRating} \n" +
+                    $"Is Family Friendly: {content.IsFamilyFriendly} \n" +
+                    $"Genre: {content.TypeOfGenre}");
+            } else {
+                Console.WriteLine("I could not find that title.");
+            }
 
         }
 
@@ -169,6 +200,19 @@ namespace _06_RepositoryPattern_Console
         private void DeleteExistingContent()
         {
 
+        }
+
+
+        //Seed Method
+        private void SeedContentList()
+        {
+            StreamingContent sharknado = new StreamingContent("Sharknado", "Tornado, but with sharks", "TV-14", 3.3, true, GenreType.Action);
+            StreamingContent theRoom = new StreamingContent("The Room", "Banker's life gets turned upside down", "R", 3.7, false, GenreType.Drama);
+            StreamingContent rubber = new StreamingContent("Rubber", "Car tire comes to life and goes on a killing spree.", "R", 5.8, false, GenreType.Documentary);
+
+            _contentRepo.AddContentToList(sharknado);
+            _contentRepo.AddContentToList(theRoom);
+            _contentRepo.AddContentToList(rubber);
         }
     }
 }
